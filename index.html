@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodBox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="topo">
+      <h1>Foodbox</h1>
+      <h2>Monte seu box e recebar até 15 minutos!</h2>
+    </div>
+    <h3>Primeiro,seu prato</h3>
+
+    <div id="frango"class="produto" onclick="alert(escolharfrango())">
+      <img
+        src="https://img.elo7.com.br/product/original/22565B3/adesivo-parede-prato-comida-frango-salada-restaurante-lindo-adesivo-parede.jpg"
+      />
+      <h4>Prato Yin-yang</h4>
+      <p>Um pouco de batata,um pouco de salada</p>
+      <p><strong>R$19,90</strong></p>
+    </div>
+    <div id="carne"class="produto2" onclick="alert(escolharcarne())">
+      <img
+        src="https://www.gazetadigital.com.br/uploads/webdisco/2017/07/13/jpg/original/31fa3f7e4e4aa073b1b455901ba60c82.jpg"
+      />
+      <h4>Carne e salada</h4>
+      <p>partida ao meio para parecer mais carne</p>
+      <p><strong>R$24,90</strong></p>
+    </div>
+    <h3>Bebidas</h3>
+
+    <div id="suco"class="produto3" onclick="alert(escolharsuco())">
+      <img
+        src="https://img.itdg.com.br/tdg/images/blog/uploads/2019/06/sucos.jpg"
+      />
+      <h4>Refresco</h4>
+      <p>podia ser suco,mas leva água</p>
+      <p><strong>R$3,90</strong></p>
+      </div>
+      <div id="refri"class="produto4" onclick="alert(escolharrefri())">
+        <img
+       src= "https://media.istockphoto.com/photos/pour-soft-drink-in-glass-with-ice-splash-on-dark-background-picture-id1062831310?k=6&m=1062831310&s=612x612&w=0&h=PpOCFv4tVU7s3nSFWkbV32kcHPes6g4g1GoUg4oRauA="/>
+        <h4>Refrigerante</h4>
+        <p>Cola gelada</p>
+        <p><strong>R$ 5,50</strong></p>
+      </div>
+    </div>
+    <h3>Por fim,sua sobremesa</h3>
+
+    <div id="pudim"class="produto5" onclick="alert(escolharpudim())">
+
+      <img
+        src="https://i.pinimg.com/originals/e0/dc/4b/e0dc4bf5c53836e444266c788dc7594c.png"
+      />
+      <h4>Pudim docinho</h4>
+      <p>Apenas um lindo e brilhante pudim</p>
+      <p class="preco"><strong>R$7,90</strong></p>
+    </div>
+    <div id="sorvete"class="produto6" onclick="alert(escolharsorvete())">
+
+
+      <img
+        src="https://media.istockphoto.com/photos/colorful-scoops-of-ice-cream-on-white-plate-picture-id915807638"
+      />
+      <h4>Sorvete bem gelado</h4>
+      <p>Três bolinhas como na foto</p>
+      <p class="preco"><strong>R$6,90</strong></p>
+    </div>
+    <div class="botao" onclick="alert(pedido)">Finalizar o pedido</div>
+  </body>
+  <script>
+    let prato;
+    let bebida;
+    let doce;
+
+    function escolharfrango() {
+      document.getElementById("frango").style.borderColor = "green";
+      document.getElementById("carne").style.borderColor = "white";
+      prato = "frango";
+    }
+    function escolharcarne(){
+      document.getElementById("frango").style.borderColor = "white";
+      document.getElementById("carne").style.borderColor = "green";
+      prato = "carne";   
+
+    }
+    function escolharrefri(){
+      document.getElementById("suco").style.borderColor = "white";
+      document.getElementById("refri").style.borderColor = "green";
+     bebida = "refri";
+    }
+    function escolharsuco(){
+      document.getElementById("refri").style.borderColor = "white";
+      document.getElementById("suco").style.borderColor = "green";
+      bebida = "suco";
+ 
+    }
+    function escolharsorvete(){
+      document.getElementById("pudim").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "green";
+     doce = "sorvete";
+    } 
+  function escolharpudim(){
+    document.getElementById("pudim").style.borderColor = "green";
+    document.getElementById("sorvete").style.borderColor = "white";
+    doce = "pudim";
+
+  }
+  function pedido(){
+    let mensagem;
+    mensagem = "Ola,gostaria de pedir um combo:"+prato+bebida+"e"+doce;
+    window.open("https://wa.me/+5575999442559?text="+mensagem);
+    alert("mensagem");
+  }
+    
+  </script>
+</html>
